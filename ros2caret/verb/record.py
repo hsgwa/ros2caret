@@ -51,6 +51,7 @@ class CaretSessionNode(Node):
 
     def start(self, verbose: bool):
         all_node_names = self.get_node_names()
+
         # NOTE: caret_trace creates nodes with the name caret_trace_[pid].
         self._node_names = {
             node_name
