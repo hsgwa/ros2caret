@@ -59,12 +59,14 @@ class CaretSessionNode(Node):
             in all_node_names
             if 'caret_trace_' in node_name
         }
+
         caret_node_num = len(self._node_names)
-        print(f'{caret_node_num} recordable processes found.',)
+        print(f'{caret_node_num} recordable processes found.')
         if verbose:
             self._progress = tqdm(
                 total=caret_node_num,
-                bar_format='{n}/{total} process started recording', leave=True)
+                bar_format='{n}/{total} process started recording',
+                leave=True)
 
         msg = Start()
         self._start_pub_.publish(msg)
